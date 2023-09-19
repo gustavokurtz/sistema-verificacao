@@ -1,0 +1,10 @@
+<form method="post" action="/add/{{id}}">
+    <input placeholder="Digite seu nome" type="text" name="name"  value="{{user.name}}" required>
+    <input placeholder="Digite seu e-mail" type="text"  name="email" value="{{user.email}}" required>
+    <button type="submit">Atualizar</button>
+</form>
+
+{{#if errorEdit}}
+    <p class="errorEdit">{{errorEdit}}</p>
+{{/if}}
+

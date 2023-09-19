@@ -1,0 +1,16 @@
+<form action="/add" method="POST">
+<input type="text" name="name" placeholder="Digite seu nome!">
+<input type="text" name="email" placeholder="Digite seu email!">
+<button type="submit">Enviar</button>
+</form>
+
+
+    <ul>
+        {{#each db}}
+            <li>{{this.name}} - {{this.email}}  <a href="/edit/{{@index}}">Editar</a>  <a href="/delete/{{@index}}">Excluir</a></li>
+        {{/each}}
+    </ul>
+
+    {{#if error}}
+    <p class="error">{{error}}</p>
+    {{/if}}
